@@ -13,8 +13,8 @@ class MoviesController < ApplicationController
   def index
     
     # Part 3
-    session[:ratings] = params[:ratings] if params[:ratings].key?
-    session[:sort_by] = params[:sort_by] if params[:sort_by].key?
+    session[:ratings] = params[:ratings] if params.has_key?(:ratings)
+    session[:sort_by] = params[:sort_by] if params.has_key?(:sort_by)
        
     
     
